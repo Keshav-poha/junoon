@@ -8,14 +8,14 @@ export default function RenderImage({ image, ...props }) {
     toPass.height = height;
   }
 
+  const hasLqip = !!metadata?.lqip;
   return (
     <Image
       key={url}
       src={url}
       alt=""
       {...toPass}
-      placeholder="blur"
-      blurDataURL={metadata.lqip}
+      {...(hasLqip ? { placeholder: "blur", blurDataURL: metadata.lqip } : {})}
       style={{
         objectFit: props.fill ? "cover" : "contain",
       }}

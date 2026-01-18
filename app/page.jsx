@@ -9,6 +9,7 @@ import fetchLogo from "@/lib/sanity/fetchLogo";
 import SpotlightCard from "@/components/SpotlightCard";
 import ContactUsForm from "@/components/ContactUsForm";
 import ParallaxImage from "@/components/ParallaxImage";
+import PhotoOfDay from "@/components/PhotoOfDay";
 
 export default async function Home() {
   const homeData = await fetchData("home");
@@ -50,6 +51,7 @@ export default async function Home() {
 
   return (
     <main className="relative bg-darker text-white">
+      <PhotoOfDay />
       <div className="pointer-events-none fixed left-1/2 top-1/2 z-0 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-neon-green/5 blur-[150px]" />
       <Div100vh>
         <div className="relative h-full w-full">
