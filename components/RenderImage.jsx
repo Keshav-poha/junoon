@@ -1,9 +1,13 @@
 import Image from "next/image";
 export default function RenderImage({ image, ...props }) {
-  const { url, metadata } = image.asset;
-  const { width, height } = metadata.dimensions;
+  if (!image || !image.asset || !image.asset.url) {
+    return <div aria-hidden className={props.className} />;
+  }
+
+  const { url, metadata = {} } = image.asset;
+  const { width, height } = metadata.dimensions || {};
   const toPass = { ...props };
-  if (!props.fill) {
+  if (!props.fill && width && height) {
     toPass.width = width;
     toPass.height = height;
   }
