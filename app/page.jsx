@@ -7,6 +7,7 @@ import StorygramCards from "@/components/StorygramCards";
 import fetchData from "@/lib/sanity/fetchData";
 import fetchLogo from "@/lib/sanity/fetchLogo";
 import SpotlightCard from "@/components/SpotlightCard";
+import ContactUsForm from "@/components/ContactUsForm";
 import ParallaxImage from "@/components/ParallaxImage";
 
 export default async function Home() {
@@ -110,6 +111,17 @@ export default async function Home() {
               </div>
             </div>
           </SpotlightCard>
+        </section>
+
+        <section className="pb-24">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h2>
+            <div className="mx-auto h-1 w-24 bg-neon-green" />
+          </div>
+
+          <div className="mx-auto w-11/12 max-w-3xl">
+            <ContactUsForm />
+          </div>
         </section>
 
         <section className="mb-32">
