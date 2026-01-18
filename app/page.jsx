@@ -113,16 +113,7 @@ export default async function Home() {
           </SpotlightCard>
         </section>
 
-        <section className="pb-24">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h2>
-            <div className="mx-auto h-1 w-24 bg-neon-green" />
-          </div>
-
-          <div className="mx-auto w-11/12 max-w-3xl">
-            <ContactUsForm />
-          </div>
-        </section>
+        
 
         <section className="mb-32">
           <div className="mb-16 flex items-center justify-between">
@@ -180,6 +171,16 @@ export default async function Home() {
             >
               {story.buttonText}
             </Link>
+          </div>
+        </section>
+        <section className="pb-24">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h2>
+            <div className="mx-auto h-1 w-24 bg-neon-green" />
+          </div>
+
+          <div className="mx-auto w-11/12 max-w-3xl">
+            <ContactUsForm />
           </div>
         </section>
       </div>
