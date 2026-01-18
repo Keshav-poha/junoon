@@ -11,6 +11,9 @@
   "plugins": ["tailwindcss"],
   "rules": {
     "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/migration-from-tailwind-2": "off",
     "eol-last": ["error", "always"]
   }
 }

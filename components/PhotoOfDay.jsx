@@ -23,7 +23,7 @@ export default function PhotoOfDay() {
         if (res.success && res.data) setData(res.data);
         else if (!res.success) setError(res.error || 'No photo available');
       })
-      .catch((err) => {
+      .catch(() => {
         if (!mounted) return;
         setError('Failed to load');
       })
